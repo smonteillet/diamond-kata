@@ -1,8 +1,6 @@
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -10,12 +8,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Created by monteillet on 07/12/2015.
  */
-public class DiamondKataTest {
+public class DiamondGeneratorTest {
 
 
     @Test
-    public void testDepth1() {
-        String diamond = DiamondKata.diamondKata(1);
+    public void testDiamondWithALetter() {
+        String diamond = DiamondGenerator.diamond('A');
         DiamondKataAssert.withDiamond(diamond).
                 assertNextLine("A").
                 assertEndOfDiamond();
@@ -23,57 +21,57 @@ public class DiamondKataTest {
     }
 
     @Test
-    public void testDepth2() {
-        String diamond = DiamondKata.diamondKata(2);
+    public void testDiamondWithBLetter() {
+        String diamond = DiamondGenerator.diamond('B');
         DiamondKataAssert.withDiamond(diamond).
-                assertNextLine("-A-").
-                assertNextLine("B-B").
-                assertNextLine("-A-").
+                assertNextLine(" A ").
+                assertNextLine("B B").
+                assertNextLine(" A ").
                 assertEndOfDiamond();
 
     }
 
     @Test
-    public void testDepth3() {
-        String diamond = DiamondKata.diamondKata(3);
+    public void testDiamondWithCLetter() {
+        String diamond = DiamondGenerator.diamond('C');
         DiamondKataAssert.withDiamond(diamond).
-                assertNextLine("--A--").
-                assertNextLine("-B-B-").
-                assertNextLine("C---C").
-                assertNextLine("-B-B-").
-                assertNextLine("--A--").
+                assertNextLine("  A  ").
+                assertNextLine(" B B ").
+                assertNextLine("C   C").
+                assertNextLine(" B B ").
+                assertNextLine("  A  ").
                 assertEndOfDiamond();
 
     }
 
     @Test
-    public void testDepth4() {
-        String diamond = DiamondKata.diamondKata(4);
+    public void testDiamondWithDLetter() {
+        String diamond = DiamondGenerator.diamond('D');
         DiamondKataAssert.withDiamond(diamond).
-                assertNextLine("---A---").
-                assertNextLine("--B-B--").
-                assertNextLine("-C---C-").
-                assertNextLine("D-----D").
-                assertNextLine("-C---C-").
-                assertNextLine("--B-B--").
-                assertNextLine("---A---").
+                assertNextLine("   A   ").
+                assertNextLine("  B B  ").
+                assertNextLine(" C   C ").
+                assertNextLine("D     D").
+                assertNextLine(" C   C ").
+                assertNextLine("  B B  ").
+                assertNextLine("   A   ").
                 assertEndOfDiamond();
 
     }
 
     @Test
-    public void testDepth5() {
-        String diamond = DiamondKata.diamondKata(5);
+    public void testDiamondWithELetter() {
+        String diamond = DiamondGenerator.diamond('E');
         DiamondKataAssert.withDiamond(diamond).
-                assertNextLine("----A----").
-                assertNextLine("---B-B---").
-                assertNextLine("--C---C--").
-                assertNextLine("-D-----D-").
-                assertNextLine("E-------E").
-                assertNextLine("-D-----D-").
-                assertNextLine("--C---C--").
-                assertNextLine("---B-B---").
-                assertNextLine("----A----").
+                assertNextLine("    A    ").
+                assertNextLine("   B B   ").
+                assertNextLine("  C   C  ").
+                assertNextLine(" D     D ").
+                assertNextLine("E       E").
+                assertNextLine(" D     D ").
+                assertNextLine("  C   C  ").
+                assertNextLine("   B B   ").
+                assertNextLine("    A    ").
                 assertEndOfDiamond();
 
     }
