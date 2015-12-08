@@ -13,7 +13,7 @@ public class DiamondGeneratorTest {
 
     @Test
     public void testDiamondWithALetter() {
-        String diamond = DiamondGenerator.diamond('A');
+        String diamond = Diamond.generate('A');
         DiamondKataAssert.withDiamond(diamond).
                 assertNextLine("A").
                 assertEndOfDiamond();
@@ -22,7 +22,7 @@ public class DiamondGeneratorTest {
 
     @Test
     public void testDiamondWithBLetter() {
-        String diamond = DiamondGenerator.diamond('B');
+        String diamond = Diamond.generate('B');
         DiamondKataAssert.withDiamond(diamond).
                 assertNextLine(" A ").
                 assertNextLine("B B").
@@ -33,7 +33,7 @@ public class DiamondGeneratorTest {
 
     @Test
     public void testDiamondWithCLetter() {
-        String diamond = DiamondGenerator.diamond('C');
+        String diamond = Diamond.generate('C');
         DiamondKataAssert.withDiamond(diamond).
                 assertNextLine("  A  ").
                 assertNextLine(" B B ").
@@ -46,7 +46,7 @@ public class DiamondGeneratorTest {
 
     @Test
     public void testDiamondWithDLetter() {
-        String diamond = DiamondGenerator.diamond('D');
+        String diamond = Diamond.generate('D');
         DiamondKataAssert.withDiamond(diamond).
                 assertNextLine("   A   ").
                 assertNextLine("  B B  ").
@@ -61,7 +61,7 @@ public class DiamondGeneratorTest {
 
     @Test
     public void testDiamondWithELetter() {
-        String diamond = DiamondGenerator.diamond('E');
+        String diamond = Diamond.generate('E');
         DiamondKataAssert.withDiamond(diamond).
                 assertNextLine("    A    ").
                 assertNextLine("   B B   ").
