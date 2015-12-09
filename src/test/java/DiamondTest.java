@@ -8,7 +8,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Created by monteillet on 07/12/2015.
  */
-public class DiamondGeneratorTest {
+public class DiamondTest
+{
 
 
     @Test
